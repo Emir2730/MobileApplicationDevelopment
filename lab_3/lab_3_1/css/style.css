@@ -1,0 +1,72 @@
+body {
+	background: #000000;
+	text-align: center;
+}
+	
+.title {
+	color:#c0c0c0;
+}
+
+.calc__number-button{
+	width: 65px;
+	height: 65px;
+	background: #000000;
+	color: #ffffff;
+	text-align: center;
+	font-weight: bold;
+	font-size: x-large;
+}
+
+.calc__number-button:hover {
+	background: #c0c0c0;
+	color: #000000;
+}
+
+
+.calc-wrap {
+	margin: 0 auto;
+	max-width: 260px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	width: 100%;
+	text-align: center;
+	background: #808080;
+}
+
+.calc__input-data {
+	background: #c0c0c0;
+	max-width: 253px;
+	min-height: 60px;
+	height: auto;
+	margin-top: px;
+	margin-bottom: px;
+	font-weight: 600;	
+	font-size: 24px;
+	overflow-x: hidden;
+	white-space: pre-wrap/*pre-line*/;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.calc__outcome {
+	width: 65px;
+	height: 65px;
+	background: rgb(255, 119, 0);
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+	font-size: x-large;
+	margin-left: -4px;
+}
+
+.calc__outcome:hover {
+	background: #c0c0c0;
+	color: #000000;
+}
+
+.button-delete {
+	width: 128px;
+	height: 65px;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <title>ToDo List vue.js</title>
+</head>
+<body>
+    <section id="app">
+        <h2 class="title"> ToDo List</h2>
+        <div class="header">
+            <input type="text" class="enter-field" placeholder="Введите задачу" @input="handleInput" @keyup.enter="add()">
+            <button type="submit" class="addbtn" @click="add()">Add</button>
+        </div>
+        <ul class="list">
+            <li class="link-task" v-for="(task, index) in tasks" :key="task.id">
+                <input type="checkbox" class="checkbox" @change="check(index)">
+                <p class="context">{{task.title}}</p>
+                <button class="close" @click="del(index, 'work')">X</button>
+            </li>
+            <li class="link-task" v-for="(task, index) in completeTasks" :key="task.id">
+                <p class="context checked">{{task.title}}</p>
+                <button class="close" @click="del(index)">X</button>
+            </li>
+        </ul>
+    </section>
+    <script src="./script/app.js"></script>
+</body>
+</html>

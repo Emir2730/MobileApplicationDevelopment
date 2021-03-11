@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+		<title>Calculator on vue.js</title>
+	</head>
+	<body>
+		<h1 class="title">Calculator</h1>
+		<div class="calc-wrap" id="calc-wrap">
+			<div class="calc__body">
+				<input class="calc__input-data" type="text" v-model="result" @keyup.enter="error()"> 
+				<button class="calc__number-button button-delete" @click="alldelete()">C</button>
+				<button class="calc__number-button button-delete" @click="onedelete()">CE</button>
+				<button class="calc__number-button" @click="input(numb)" v-for="numb in number">{{numb}}</button>
+				<button class="calc__outcome" @click="outcome()">=</button>
+			</div>
+		</div>
+		<script src="js/app.js"></script>
+	</body>
+</html>
